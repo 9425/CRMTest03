@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+这一层是对sql语句的编写进行控制
+-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CRM03">
+    <select id="getById" resultType="domain.Student">
+        select * from tbl_student where id = #{id}
+    </select>
+    <insert id="save">
+        insert into tbl_student(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+</mapper>
